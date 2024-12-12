@@ -1,0 +1,7 @@
+spring:
+  application:
+    name:
+      conceptile
+  profiles:
+    active:
+      dev
