@@ -18,9 +18,10 @@ public class SubmittedAnswer {
     private Integer id;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private QustionEnum givenAnswer;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(nullable = false)
     private Question question;
 

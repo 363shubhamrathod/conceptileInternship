@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -19,6 +20,6 @@ public class Session {
     @GeneratedValue
     private Integer id;
 
-    @OneToMany
-    private List<SubmittedAnswer> submittedAnswers;
+    @OneToMany(mappedBy = "session", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<SubmittedAnswer> submittedAnswers = new ArrayList<>();
 }
