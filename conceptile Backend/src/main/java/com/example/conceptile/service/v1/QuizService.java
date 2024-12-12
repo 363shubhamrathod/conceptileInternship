@@ -58,7 +58,6 @@ public class QuizService {
     public QuizResultOutgoingData getResult(Integer sessionId) {
         Session session = sessionRepository.findById(sessionId)
                 .orElseThrow(() -> new GenericExceptionHandler("Session does not exist"));
-        System.out.println(session.getSubmittedAnswers().size());
         int totalAttempted = session.getSubmittedAnswers().size();
         int correctAnswers = 0;
         int wrongAnswers = 0;
