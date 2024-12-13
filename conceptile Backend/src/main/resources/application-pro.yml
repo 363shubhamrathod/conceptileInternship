@@ -5,9 +5,13 @@ spring:
         never
   jpa:
     hibernate:
-      ddl-auto: verify
+      ddl-auto: create
     show-sql: false
     properties:
       hibernate:
         format_sql: false
-    database: h2
+  datasource:
+    url: jdbc:postgresql://localhost:5432/DataBaseName
+    username: OwnerOfDatabase
+    password: PasswordOfOwner
+    driver-class-name: org.postgresql.Driver
