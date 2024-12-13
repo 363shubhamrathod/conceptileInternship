@@ -5,6 +5,11 @@ Conceptile is a Java-based application with an H2 in-memory database for managin
 
 ---
 
+## Demo
+
+![Swagger Demo](./projectImages/Demo.gif "Swagger Demo")
+
+---
 ## Prerequisites
 
 Ensure the following are installed on your system:
@@ -66,6 +71,22 @@ http://localhost:8080/swagger-ui.html
 2. Use the interactive interface to test the available APIs.
 
 ---
+## How the APIs Work
+
+1. **Create a New Session** with `GET /quiz/new`:  
+   This endpoint creates a new session and returns a **new session ID**.
+
+2. **Get a Random Question** with `GET /quiz/session/{sessionId}`:  
+   This endpoint retrieves a random question for the specified session using the session ID.
+
+3. **Post an Answer** with `POST /quiz/session/{sessionId}`:  
+   This endpoint accepts the question ID and the answer in the request body, allowing the user to submit an answer for the given question.
+
+4. **Get the Result** with `GET /quiz/session/{sessionId}/result`:  
+   This endpoint returns the result of the submitted answers for the specified session.ession id
+
+---
+
 
 ## Database
 
